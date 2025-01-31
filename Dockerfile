@@ -13,17 +13,8 @@ RUN npm install
 # Copy the rest of the application files to the working directory
 COPY . .
 
-# Build the React app
-RUN npm run build
-
-# Use an official Nginx image to serve the React app
-FROM nginx:alpine
-
-# Copy the built React app to Nginx's default HTML directory
-COPY --from=0 /app/build /usr/share/nginx/html
-
-# Expose port 3000
+# Expose port 3000 (React's default port)
 EXPOSE 3000
 
-# Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Start the development server
+CMD ["npm", "start"]

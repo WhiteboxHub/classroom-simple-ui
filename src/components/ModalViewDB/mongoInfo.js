@@ -10,7 +10,7 @@ const MongoDBInfo = ({ show, onHide, selectedDb }) => {
   });
 
   // API endpoint base URL - update this to your actual API base
-  const API_BASE_URL = 'http://usebase-url';
+  const API_BASE_URL = 'http://localhost/8000';
 
   useEffect(() => {
     if (show) {
@@ -21,7 +21,7 @@ const MongoDBInfo = ({ show, onHide, selectedDb }) => {
   // CRUD Operations for MongoDB Records
   const fetchRecords = async () => {
     try {
-      const response = await axios.get(`${API_BASE_URL}/mongodbrecords`);
+      const response = await axios.get(`${API_BASE_URL}/student/retrieve`);
       setRecords(response.data);
     } catch (error) {
       console.error('Error fetching MongoDB records:', error);
@@ -30,8 +30,7 @@ const MongoDBInfo = ({ show, onHide, selectedDb }) => {
 
   const createRecord = async () => {
     try {
-      await axios.post(`${API_BASE_URL}/mongodbrecords`, formData.records);
-      fetchRecords();
+      await axios.post(`${API_BASE_URL}/student/update/{student_id}", response_model=dict
       setFormData({ ...formData, records: { name: '', description: '' } });
     } catch (error) {
       console.error('Error creating MongoDB record:', error);

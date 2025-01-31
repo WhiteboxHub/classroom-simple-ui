@@ -24,7 +24,7 @@ const DatabaseModal = ({ show, onHide, selectedDb }) => {
   // CRUD Operations for Courses
   const fetchCourses = async () => {
     try {
-      const response = await axios.get(`${API_BASE_URL}/courses`);
+      const response = await axios.get(`${API_BASE_URL}/course/retrieve`);
       setCourses(response.data);
     } catch (error) {
       console.error('Error fetching courses:', error);
@@ -33,7 +33,7 @@ const DatabaseModal = ({ show, onHide, selectedDb }) => {
 
   const createCourse = async () => {
     try {
-      await axios.post(`${API_BASE_URL}/courses`, formData.courses);
+      await axios.post(`${API_BASE_URL}/course/create`, formData.courses);
       fetchCourses();
       setFormData({ ...formData, courses: { name: '', description: '', duration: '' } });
     } catch (error) {
@@ -52,7 +52,7 @@ const DatabaseModal = ({ show, onHide, selectedDb }) => {
 
   const deleteCourse = async (id) => {
     try {
-      await axios.delete(`${API_BASE_URL}/courses/${id}`);
+      await axios.delete(`${API_BASE_URL}/courses/subject/retrieve`);
       fetchCourses();
     } catch (error) {
       console.error('Error deleting course:', error);
@@ -62,7 +62,7 @@ const DatabaseModal = ({ show, onHide, selectedDb }) => {
   // CRUD Operations for Subjects
   const fetchSubjects = async () => {
     try {
-      const response = await axios.get(`${API_BASE_URL}/subjects`);
+      const response = await axios.get(`${API_BASE_URL}/subject/retrieve/{subject_id}`);
       setSubjects(response.data);
     } catch (error) {
       console.error('Error fetching subjects:', error);
