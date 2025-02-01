@@ -15,7 +15,7 @@ const Register = () => {
               type="text"
               id="fullname"
               className="form-control"
-              placeholder="John Doe"
+              // placeholder="John Doe"
               required
             />
           </div>
@@ -27,7 +27,7 @@ const Register = () => {
               type="email"
               id="email"
               className="form-control"
-              placeholder="you@example.com"
+              // placeholder="you@example.com"
               required
             />
           </div>
@@ -39,7 +39,7 @@ const Register = () => {
               type="password"
               id="password"
               className="form-control"
-              placeholder="********"
+              // placeholder="********"
               required
             />
           </div>
@@ -51,7 +51,7 @@ const Register = () => {
               type="text"
               id="city"
               className="form-control"
-              placeholder="Your City"
+              // placeholder="Your City"
               required
             />
           </div>
@@ -63,7 +63,7 @@ const Register = () => {
               type="tel"
               id="phonenumber"
               className="form-control"
-              placeholder="123-456-7890"
+              // placeholder="123-456-7890"
               required
             />
           </div>

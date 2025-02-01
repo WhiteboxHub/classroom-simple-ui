@@ -15,7 +15,7 @@ const Login = () => {
               type="email"
               id="email"
               className="form-control"
-              placeholder="you@example.com"
+              // placeholder="you@example.com"
               required
             />
           </div>
@@ -27,7 +27,7 @@ const Login = () => {
               type="password"
               id="password"
               className="form-control"
-              placeholder="********"
+              // placeholder="********"
               required
             />
           </div>

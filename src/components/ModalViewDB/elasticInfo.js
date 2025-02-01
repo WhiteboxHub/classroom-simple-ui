@@ -9,8 +9,8 @@ const ElasticInfo = ({ show, onHide, selectedDb }) => {
     documents: { title: '', content: '' }
   });
 
-  // API endpoints
-  const API_BASE_URL = 'http://';
+  // API endpoints(no apis created in backend                                                                                                                                                                                                                                                                                                       a)
+  const API_BASE_URL = 'http://example.api';
 
   useEffect(() => {
     if (show) {
